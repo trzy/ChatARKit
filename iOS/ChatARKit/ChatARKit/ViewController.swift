@@ -28,7 +28,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
     @IBOutlet weak var toggleRecordButton: UIButton!
     @IBOutlet weak var textView: UITextView!
 
-
     @IBAction func onConnectButtonPressed(_ sender: Any) {
         // Try to establish connection to ChatGPT Python server
         connectionErrorLabel.isHidden = true
@@ -47,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
             self.toggleRecordButton.isHidden = true
             audioCapture.stopCapture { (modelAudioInputBuffer: AVAudioPCMBuffer?) in
                 if let modelAudioInputBuffer = modelAudioInputBuffer {
-                    // Run model on audio queue (which will block subsequent capture request until
+                    // Run model on audio queue
                     audioCapture.queue.async {
                         if let segments = self._model?.infer(buffer: modelAudioInputBuffer) {
                             let completeText = segments.joined(separator: " ")
@@ -86,17 +85,17 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         hostname.delegate = self
         port.delegate = self
-        
+
         // Create AR engine
         _engine = Engine(sceneView: sceneView)
-        
-        // Initialie Whisper model
+
+        // Initialize Whisper model
         guard let modelPath = Bundle.main.path(forResource: "ggml-base.en", ofType: "bin") else {
             fatalError("Model path invalid")
         }
@@ -105,7 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
         // Set up audio capture
         _audioCapture = AudioCaptureController(outputFormat: _model!.format)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -115,7 +114,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
         // Disable record button but enable connection UI
         showConnectionView(visible: true)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         _engine?.pause()
@@ -135,12 +134,12 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
         self.view.endEditing(true)
         return false
     }
-    
+
     // MARK: - Connection to ChatGPT Server, ConnectionDelegate
-    
+
     private var _client: TCPConnection?
     private var _connection: Connection?
-    
+
     private func tryConnect(delay: TimeInterval) {
         _client = nil
         _connection = nil
@@ -154,14 +153,14 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
             }
         }
     }
-    
+
     public func onConnect(from connection: Connection) {
         _connection = connection
         _connection?.send(HelloMessage(message: "Hello from ChatARKit"))
         print("Connected!")
         showConnectionView(visible: false)
     }
-        
+
     public func onDisconnect(from connection: Connection) {
         print("[ViewController] Disconnected from \(connection)")
         showConnectionView(visible: true)
@@ -175,7 +174,7 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
             connectionErrorLabel.text = "Disconnected."
         }
     }
-    
+
     public func onMessageReceived(from connection: Connection, id: String, data: Data) {
         let decoder = JSONDecoder()
         do {
