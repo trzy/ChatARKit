@@ -3,7 +3,7 @@
 
 ## Demo Video
 
-[Click here for a demo video](https://www.youtube.com/watch?v=sA8hcOUJ6B0).
+[Click here for a demo video](https://youtu.be/bJFa5HOmhl4).
 
 ![A car placed using ChatARKit](images/Screenshot1.png)
 ![A frog placed using ChatARKit](images/Screenshot2.png)
