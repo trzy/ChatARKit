@@ -10,7 +10,7 @@
 
 ## Overview
 
-ChatARKit is an experiment to see whether [ChatGPT](https://chat.openai.com/chat) can be harnessed to write code using custom user-defined APIs. You can speak a prompt asking ChatARKit to place objects of a certain type on nearby planes, and perform some basic manipulations of their position, scale, and orientation. More interactions could readily be added. Here are some sample prompts to try:
+ChatARKit is an experiment to see whether [ChatGPT](https://chat.openai.com/chat) can be harnessed to write code using custom user-defined APIs. You can speak a prompt asking ChatARKit to place objects of a certain type on nearby planes and perform some basic manipulations of their position, scale, and orientation. More interactions could readily be added. Here are some sample prompts to try:
 
 - "Place a cube on the nearest plane."
 - "Place a spinning cube on the floor."
@@ -76,11 +76,19 @@ python -m chatgpt
 
 By default, it will listen on port 6502. It will ask you for the session token obtained in step 2. Paste it and press enter. A Chromium window should appear and automatically log into ChatGPT.
 
-### 5. Launch ChatARKit on iPhone
+### 5. Download the Whisper Model Weights
 
-Deploy ChatARKit to your iPhone and connect to the ChatGPT Python relay server by using your computer's local IP address. On Windows, this can be found using the `ipconfig` command. On MacOS or Linux, use `ifconfig`.
+Before opening the iOS project, make sure to download the required Whisper model. From the root of the repository directory on MacOS, type:
 
-### 6. Try a Prompt!
+```
+curl -L --output iOS/ChatARKit/ChatARKit/ggml-base.en.bin https://huggingface.co/datasets/ggerganov/whisper.cpp/resolve/main/ggml-base.en.bin
+```
+ 
+### 6. Launch ChatARKit on iPhone
+
+Open iOS/ChatARKit/ChatARKit.xcodeproj and deploy ChatARKit to your iPhone. Connect to the ChatGPT Python relay server by using your computer's local IP address. On Windows, this can be found using the `ipconfig` command. On MacOS or Linux, use `ifconfig`.
+
+### 7. Try a Prompt!
 
 Look around to ensure some planes are detected and then press the *Record* button and speak a prompt. For example: "Place a cube on the nearest plane." Press *Stop* when finished to parse the result. You should see ChatGPT producing a response in the Chromium window. This can take a very long time. Be patient. Once ChatGPT is finished, the code is beamed back to your iPhone and should hopefully execute successfully.
 
