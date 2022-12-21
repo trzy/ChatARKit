@@ -86,7 +86,7 @@ curl -L --output iOS/ChatARKit/ChatARKit/ggml-base.en.bin https://huggingface.co
  
 ### 6. Launch ChatARKit on iPhone
 
-Open iOS/ChatARKit/ChatARKit.xcodeproj and deploy ChatARKit to your iPhone. Connect to the ChatGPT Python relay server by using your computer's local IP address. On Windows, this can be found using the `ipconfig` command. On MacOS or Linux, use `ifconfig`.
+Open `iOS/ChatARKit/ChatARKit.xcodeproj` and deploy ChatARKit to your iPhone. Connect to the ChatGPT Python relay server by using your computer's local IP address. On Windows, this can be found using the `ipconfig` command. On MacOS or Linux, use `ifconfig`.
 
 ### 7. Try a Prompt!
 
