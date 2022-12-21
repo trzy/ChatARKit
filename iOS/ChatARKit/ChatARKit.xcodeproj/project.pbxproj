@@ -1,0 +1,1330 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC443A36294FECD9009E8941 /* simd_float3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A35294FECD9009E8941 /* simd_float3+Extensions.swift */; };
+		CC443A39294FEE25009E8941 /* SketchfabEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A38294FEE25009E8941 /* SketchfabEntity.swift */; };
+		CC443A4D294FF549009E8941 /* Zip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A3C294FF549009E8941 /* Zip.swift */; };
+		CC443A4E294FF549009E8941 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = CC443A3E294FF549009E8941 /* unzip.c */; };
+		CC443A4F294FF549009E8941 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = CC443A3F294FF549009E8941 /* zip.c */; };
+		CC443A50294FF549009E8941 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CC443A40294FF549009E8941 /* ioapi.c */; };
+		CC443A51294FF549009E8941 /* QuickZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A49294FF549009E8941 /* QuickZip.swift */; };
+		CC443A52294FF549009E8941 /* ZipUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A4A294FF549009E8941 /* ZipUtilities.swift */; };
+		CC443A5529503C38009E8941 /* CMSampleBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A5429503C38009E8941 /* CMSampleBuffer+Extensions.swift */; };
+		CC443A5829503FFA009E8941 /* AVAudioPCMBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A5729503FFA009E8941 /* AVAudioPCMBuffer+Extensions.swift */; };
+		CC443A5A295044E0009E8941 /* AudioCaptureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC443A59295044E0009E8941 /* AudioCaptureController.swift */; };
+		CC450A422941AD93009019BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A412941AD93009019BE /* AppDelegate.swift */; };
+		CC450A442941AD93009019BE /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CC450A432941AD93009019BE /* Assets.scnassets */; };
+		CC450A462941AD93009019BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A452941AD93009019BE /* ViewController.swift */; };
+		CC450A492941AD93009019BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC450A472941AD93009019BE /* Main.storyboard */; };
+		CC450A4B2941AD94009019BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC450A4A2941AD94009019BE /* Assets.xcassets */; };
+		CC450A4E2941AD94009019BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC450A4C2941AD94009019BE /* LaunchScreen.storyboard */; };
+		CC450A582941AD94009019BE /* ChatARKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A572941AD94009019BE /* ChatARKitTests.swift */; };
+		CC450A622941AD94009019BE /* ChatARKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A612941AD94009019BE /* ChatARKitUITests.swift */; };
+		CC450A642941AD94009019BE /* ChatARKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A632941AD94009019BE /* ChatARKitUITestsLaunchTests.swift */; };
+		CC450A762942B729009019BE /* ggml.c in Sources */ = {isa = PBXBuildFile; fileRef = CC450A732942B729009019BE /* ggml.c */; settings = {COMPILER_FLAGS = "-DGGML_USE_ACCELERATE"; }; };
+		CC450A772942B729009019BE /* whisper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC450A742942B729009019BE /* whisper.cpp */; };
+		CC450A792942C960009019BE /* ggml-base.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = CC450A782942C960009019BE /* ggml-base.en.bin */; };
+		CC450A7B294309EB009019BE /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7A294309EB009019BE /* Whisper.swift */; };
+		CC450A8029459505009019BE /* TCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7D29459505009019BE /* TCP.swift */; };
+		CC450A8129459505009019BE /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7E29459505009019BE /* Connection.swift */; };
+		CC450A8229459505009019BE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7F29459505009019BE /* Messages.swift */; };
+		CC450A872945A3B9009019BE /* UtilNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A842945A3B9009019BE /* UtilNamespace.swift */; };
+		CC450A882945A3B9009019BE /* HexDump.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A852945A3B9009019BE /* HexDump.swift */; };
+		CC450A892945A3B9009019BE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A862945A3B9009019BE /* Stopwatch.swift */; };
+		CCE2B5502947122200D53DD5 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B54F2947122200D53DD5 /* Engine.swift */; };
+		CCE2B5522947158F00D53DD5 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B5512947158F00D53DD5 /* Entity.swift */; };
+		CCE2B5542948040A00D53DD5 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B5532948040A00D53DD5 /* Plane.swift */; };
+		CCE2B55629480BA700D53DD5 /* ARPlaneAnchor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B55529480BA700D53DD5 /* ARPlaneAnchor+Extensions.swift */; };
+		CCE2B55829480BF300D53DD5 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B55729480BF300D53DD5 /* SCNNode+Extensions.swift */; };
+		CCE2B55A29480C2800D53DD5 /* float4x4+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B55929480C2800D53DD5 /* float4x4+Extensions.swift */; };
+		CCE2B55C294C2D8C00D53DD5 /* CubeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B55B294C2D8C00D53DD5 /* CubeEntity.swift */; };
+		CCE2B55E294D923700D53DD5 /* SIMDAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B55D294D923700D53DD5 /* SIMDAliases.swift */; };
+		CCE2B560294E4F4D00D53DD5 /* simd_float4x4+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B55F294E4F4D00D53DD5 /* simd_float4x4+Extensions.swift */; };
+		CCE93213294FA45000D388A0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CCE931A2294FA44F00D388A0 /* LICENSE */; };
+		CCE93214294FA45000D388A0 /* GLTFSceneKit+BundleFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931A5294FA44F00D388A0 /* GLTFSceneKit+BundleFinder.swift */; };
+		CCE93215294FA45000D388A0 /* GLTFSceneSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931A7294FA44F00D388A0 /* GLTFSceneSource.swift */; };
+		CCE93216294FA45000D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931AA294FA44F00D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture.shader */; };
+		CCE93217294FA45000D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture_Cutoff.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931AB294FA44F00D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture_Cutoff.shader */; };
+		CCE93218294FA45000D388A0 /* GLTFShaderModifierSurface_VRMMToon.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931AC294FA44F00D388A0 /* GLTFShaderModifierSurface_VRMMToon.shader */; };
+		CCE93219294FA45000D388A0 /* GLTFShaderModifierSurface_alphaModeBlend.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931AD294FA44F00D388A0 /* GLTFShaderModifierSurface_alphaModeBlend.shader */; };
+		CCE9321A294FA45000D388A0 /* GLTFShaderModifierSurface.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931AE294FA44F00D388A0 /* GLTFShaderModifierSurface.shader */; };
+		CCE9321B294FA45000D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931B0294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader */; };
+		CCE9321C294FA45000D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931B1294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader */; };
+		CCE9321D294FA45000D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931B2294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader */; };
+		CCE9321E294FA45000D388A0 /* GLTFShaderModifierFragment_alphaCutoff.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931B3294FA44F00D388A0 /* GLTFShaderModifierFragment_alphaCutoff.shader */; };
+		CCE9321F294FA45000D388A0 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader in Resources */ = {isa = PBXBuildFile; fileRef = CCE931B4294FA44F00D388A0 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader */; };
+		CCE93220294FA45000D388A0 /* GLTFUnarchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931B5294FA44F00D388A0 /* GLTFUnarchiver.swift */; };
+		CCE93221294FA45000D388A0 /* GLTFErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931B6294FA44F00D388A0 /* GLTFErrors.swift */; };
+		CCE93222294FA45000D388A0 /* GLTFScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931B8294FA44F00D388A0 /* GLTFScene.swift */; };
+		CCE93223294FA45000D388A0 /* GLTFExtrasTargetNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931B9294FA44F00D388A0 /* GLTFExtrasTargetNames.swift */; };
+		CCE93224294FA45000D388A0 /* GLTFGlTFChildOfRootProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931BA294FA44F00D388A0 /* GLTFGlTFChildOfRootProperty.swift */; };
+		CCE93225294FA45000D388A0 /* GLTFCameraOrthographic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931BB294FA44F00D388A0 /* GLTFCameraOrthographic.swift */; };
+		CCE93226294FA45000D388A0 /* GLTFGlTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931BC294FA44F00D388A0 /* GLTFGlTF.swift */; };
+		CCE93227294FA45000D388A0 /* GLTFAnimationChannelTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931BD294FA44F00D388A0 /* GLTFAnimationChannelTarget.swift */; };
+		CCE93228294FA45000D388A0 /* GLTFAnimationSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931BE294FA44F00D388A0 /* GLTFAnimationSampler.swift */; };
+		CCE93229294FA45000D388A0 /* GLTFTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931BF294FA44F00D388A0 /* GLTFTexture.swift */; };
+		CCE9322A294FA45000D388A0 /* GLTFTextureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C0294FA44F00D388A0 /* GLTFTextureInfo.swift */; };
+		CCE9322B294FA45000D388A0 /* GLTFSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C1294FA44F00D388A0 /* GLTFSampler.swift */; };
+		CCE9322C294FA45000D388A0 /* GLTFBufferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C2294FA44F00D388A0 /* GLTFBufferView.swift */; };
+		CCE9322D294FA45000D388A0 /* GLTFMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C3294FA44F00D388A0 /* GLTFMesh.swift */; };
+		CCE9322E294FA45000D388A0 /* GLTFGlTFProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C4294FA44F00D388A0 /* GLTFGlTFProperty.swift */; };
+		CCE9322F294FA45000D388A0 /* GLTFBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C5294FA44F00D388A0 /* GLTFBuffer.swift */; };
+		CCE93230294FA45000D388A0 /* GLTFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C6294FA44F00D388A0 /* GLTFImage.swift */; };
+		CCE93231294FA45000D388A0 /* GLTFExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C7294FA44F00D388A0 /* GLTFExtras.swift */; };
+		CCE93232294FA45000D388A0 /* GLTFAccessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C8294FA44F00D388A0 /* GLTFAccessor.swift */; };
+		CCE93233294FA45000D388A0 /* GLTFExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931C9294FA44F00D388A0 /* GLTFExtension.swift */; };
+		CCE93234294FA45000D388A0 /* GLTFMaterialNormalTextureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931CA294FA44F00D388A0 /* GLTFMaterialNormalTextureInfo.swift */; };
+		CCE93235294FA45000D388A0 /* ExtensionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931CC294FA44F00D388A0 /* ExtensionList.swift */; };
+		CCE93236294FA45000D388A0 /* GLTFVRM_VRMSpringBoneLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931CE294FA44F00D388A0 /* GLTFVRM_VRMSpringBoneLogic.swift */; };
+		CCE93237294FA45000D388A0 /* GLTFVRM_VRMSpringBone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931CF294FA44F00D388A0 /* GLTFVRM_VRMSpringBone.swift */; };
+		CCE93238294FA45000D388A0 /* GLTFVRM_VRMTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D0294FA44F00D388A0 /* GLTFVRM_VRMTypes.swift */; };
+		CCE93239294FA45000D388A0 /* GLTFVRM_VRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D1294FA44F00D388A0 /* GLTFVRM_VRM.swift */; };
+		CCE9323A294FA45000D388A0 /* GLTFVRM_VRMState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D2294FA44F00D388A0 /* GLTFVRM_VRMState.swift */; };
+		CCE9323B294FA45000D388A0 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D4294FA44F00D388A0 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift */; };
+		CCE9323C294FA45000D388A0 /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D6294FA44F00D388A0 /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift */; };
+		CCE9323D294FA45000D388A0 /* GLTFAnimationChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D7294FA44F00D388A0 /* GLTFAnimationChannel.swift */; };
+		CCE9323E294FA45000D388A0 /* GLTFMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D8294FA44F00D388A0 /* GLTFMaterial.swift */; };
+		CCE9323F294FA45000D388A0 /* GLTFSkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931D9294FA44F00D388A0 /* GLTFSkin.swift */; };
+		CCE93240294FA45000D388A0 /* GLTFCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931DA294FA44F00D388A0 /* GLTFCamera.swift */; };
+		CCE93241294FA45000D388A0 /* GLTFAccessorSparse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931DB294FA44F00D388A0 /* GLTFAccessorSparse.swift */; };
+		CCE93242294FA45000D388A0 /* GLTFMaterialOcclusionTextureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931DC294FA44F00D388A0 /* GLTFMaterialOcclusionTextureInfo.swift */; };
+		CCE93243294FA45000D388A0 /* GLTFMaterialPbrMetallicRoughness.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931DD294FA44F00D388A0 /* GLTFMaterialPbrMetallicRoughness.swift */; };
+		CCE93244294FA45000D388A0 /* GLTFNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931DE294FA44F00D388A0 /* GLTFNode.swift */; };
+		CCE93245294FA45000D388A0 /* GLTFAccessorSparseValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931DF294FA44F00D388A0 /* GLTFAccessorSparseValues.swift */; };
+		CCE93246294FA45000D388A0 /* GLTFAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E0294FA44F00D388A0 /* GLTFAnimation.swift */; };
+		CCE93247294FA45000D388A0 /* GLTFAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E1294FA44F00D388A0 /* GLTFAsset.swift */; };
+		CCE93248294FA45000D388A0 /* GLTFGlTFid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E2294FA44F00D388A0 /* GLTFGlTFid.swift */; };
+		CCE93249294FA45000D388A0 /* GLTFAccessorSparseIndices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E3294FA44F00D388A0 /* GLTFAccessorSparseIndices.swift */; };
+		CCE9324A294FA45000D388A0 /* GLTFCameraPerspective.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E4294FA44F00D388A0 /* GLTFCameraPerspective.swift */; };
+		CCE9324B294FA45000D388A0 /* GLTFMeshPrimitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E5294FA44F00D388A0 /* GLTFMeshPrimitive.swift */; };
+		CCE9324C294FA45000D388A0 /* GLTFFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E6294FA44F00D388A0 /* GLTFFunctions.swift */; };
+		CCE9324D294FA45000D388A0 /* GLTFTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931E7294FA44F00D388A0 /* GLTFTypes.swift */; };
+		CCE93253294FA45000D388A0 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE931F0294FA45000D388A0 /* GameView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC450A542941AD94009019BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC450A362941AD93009019BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC450A3D2941AD93009019BE;
+			remoteInfo = ChatARKit;
+		};
+		CC450A5E2941AD94009019BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC450A362941AD93009019BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC450A3D2941AD93009019BE;
+			remoteInfo = ChatARKit;
+		};
+		CCE9320B294FA45000D388A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE93204294FA45000D388A0 /* GLTFSceneKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD83924C1F466C2D006A1CAC;
+			remoteInfo = GLTFSceneKit_macOS;
+		};
+		CCE9320D294FA45000D388A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE93204294FA45000D388A0 /* GLTFSceneKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DD3EB0711F52476B009F32D2;
+			remoteInfo = GLTFSceneKit_iOS;
+		};
+		CCE93261294FA4A300D388A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCE93204294FA45000D388A0 /* GLTFSceneKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DD3EB0701F52476B009F32D2;
+			remoteInfo = GLTFSceneKit_iOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC443A35294FECD9009E8941 /* simd_float3+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "simd_float3+Extensions.swift"; sourceTree = "<group>"; };
+		CC443A38294FEE25009E8941 /* SketchfabEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchfabEntity.swift; sourceTree = "<group>"; };
+		CC443A3B294FF549009E8941 /* Zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zip.h; sourceTree = "<group>"; };
+		CC443A3C294FF549009E8941 /* Zip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zip.swift; sourceTree = "<group>"; };
+		CC443A3E294FF549009E8941 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		CC443A3F294FF549009E8941 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		CC443A40294FF549009E8941 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		CC443A42294FF549009E8941 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		CC443A44294FF549009E8941 /* Minizip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Minizip.h; sourceTree = "<group>"; };
+		CC443A45294FF549009E8941 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		CC443A46294FF549009E8941 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		CC443A47294FF549009E8941 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		CC443A48294FF549009E8941 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		CC443A49294FF549009E8941 /* QuickZip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickZip.swift; sourceTree = "<group>"; };
+		CC443A4A294FF549009E8941 /* ZipUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipUtilities.swift; sourceTree = "<group>"; };
+		CC443A4C294FF549009E8941 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		CC443A5429503C38009E8941 /* CMSampleBuffer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMSampleBuffer+Extensions.swift"; sourceTree = "<group>"; };
+		CC443A5729503FFA009E8941 /* AVAudioPCMBuffer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPCMBuffer+Extensions.swift"; sourceTree = "<group>"; };
+		CC443A59295044E0009E8941 /* AudioCaptureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCaptureController.swift; sourceTree = "<group>"; };
+		CC450A3E2941AD93009019BE /* ChatARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatARKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC450A412941AD93009019BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC450A432941AD93009019BE /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
+		CC450A452941AD93009019BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC450A482941AD93009019BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC450A4A2941AD94009019BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC450A4D2941AD94009019BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC450A532941AD94009019BE /* ChatARKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatARKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC450A572941AD94009019BE /* ChatARKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatARKitTests.swift; sourceTree = "<group>"; };
+		CC450A5D2941AD94009019BE /* ChatARKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatARKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC450A612941AD94009019BE /* ChatARKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatARKitUITests.swift; sourceTree = "<group>"; };
+		CC450A632941AD94009019BE /* ChatARKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatARKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC450A712942B729009019BE /* ChatARKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatARKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC450A722942B729009019BE /* ggml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ggml.h; sourceTree = "<group>"; };
+		CC450A732942B729009019BE /* ggml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ggml.c; sourceTree = "<group>"; };
+		CC450A742942B729009019BE /* whisper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = whisper.cpp; sourceTree = "<group>"; };
+		CC450A752942B729009019BE /* whisper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whisper.h; sourceTree = "<group>"; };
+		CC450A782942C960009019BE /* ggml-base.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-base.en.bin"; sourceTree = "<group>"; };
+		CC450A7A294309EB009019BE /* Whisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
+		CC450A7D29459505009019BE /* TCP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCP.swift; sourceTree = "<group>"; };
+		CC450A7E29459505009019BE /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		CC450A7F29459505009019BE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		CC450A842945A3B9009019BE /* UtilNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilNamespace.swift; sourceTree = "<group>"; };
+		CC450A852945A3B9009019BE /* HexDump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexDump.swift; sourceTree = "<group>"; };
+		CC450A862945A3B9009019BE /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		CCE2B54F2947122200D53DD5 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		CCE2B5512947158F00D53DD5 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		CCE2B5532948040A00D53DD5 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		CCE2B55529480BA700D53DD5 /* ARPlaneAnchor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARPlaneAnchor+Extensions.swift"; sourceTree = "<group>"; };
+		CCE2B55729480BF300D53DD5 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extensions.swift"; sourceTree = "<group>"; };
+		CCE2B55929480C2800D53DD5 /* float4x4+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float4x4+Extensions.swift"; sourceTree = "<group>"; };
+		CCE2B55B294C2D8C00D53DD5 /* CubeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeEntity.swift; sourceTree = "<group>"; };
+		CCE2B55D294D923700D53DD5 /* SIMDAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIMDAliases.swift; sourceTree = "<group>"; };
+		CCE2B55F294E4F4D00D53DD5 /* simd_float4x4+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "simd_float4x4+Extensions.swift"; sourceTree = "<group>"; };
+		CCE931A2294FA44F00D388A0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CCE931A5294FA44F00D388A0 /* GLTFSceneKit+BundleFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GLTFSceneKit+BundleFinder.swift"; sourceTree = "<group>"; };
+		CCE931A6294FA44F00D388A0 /* GLTFSceneKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTFSceneKit.h; sourceTree = "<group>"; };
+		CCE931A7294FA44F00D388A0 /* GLTFSceneSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFSceneSource.swift; sourceTree = "<group>"; };
+		CCE931AA294FA44F00D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierFragment_VRMUnlitTexture.shader; sourceTree = "<group>"; };
+		CCE931AB294FA44F00D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture_Cutoff.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierFragment_VRMUnlitTexture_Cutoff.shader; sourceTree = "<group>"; };
+		CCE931AC294FA44F00D388A0 /* GLTFShaderModifierSurface_VRMMToon.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface_VRMMToon.shader; sourceTree = "<group>"; };
+		CCE931AD294FA44F00D388A0 /* GLTFShaderModifierSurface_alphaModeBlend.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface_alphaModeBlend.shader; sourceTree = "<group>"; };
+		CCE931AE294FA44F00D388A0 /* GLTFShaderModifierSurface.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface.shader; sourceTree = "<group>"; };
+		CCE931B0294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface_pbrSpecularGlossiness.shader; sourceTree = "<group>"; };
+		CCE931B1294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader; sourceTree = "<group>"; };
+		CCE931B2294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader; sourceTree = "<group>"; };
+		CCE931B3294FA44F00D388A0 /* GLTFShaderModifierFragment_alphaCutoff.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierFragment_alphaCutoff.shader; sourceTree = "<group>"; };
+		CCE931B4294FA44F00D388A0 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLTFShaderModifierSurface_doubleSidedWorkaround.shader; sourceTree = "<group>"; };
+		CCE931B5294FA44F00D388A0 /* GLTFUnarchiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFUnarchiver.swift; sourceTree = "<group>"; };
+		CCE931B6294FA44F00D388A0 /* GLTFErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFErrors.swift; sourceTree = "<group>"; };
+		CCE931B8294FA44F00D388A0 /* GLTFScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFScene.swift; sourceTree = "<group>"; };
+		CCE931B9294FA44F00D388A0 /* GLTFExtrasTargetNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFExtrasTargetNames.swift; sourceTree = "<group>"; };
+		CCE931BA294FA44F00D388A0 /* GLTFGlTFChildOfRootProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFGlTFChildOfRootProperty.swift; sourceTree = "<group>"; };
+		CCE931BB294FA44F00D388A0 /* GLTFCameraOrthographic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFCameraOrthographic.swift; sourceTree = "<group>"; };
+		CCE931BC294FA44F00D388A0 /* GLTFGlTF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFGlTF.swift; sourceTree = "<group>"; };
+		CCE931BD294FA44F00D388A0 /* GLTFAnimationChannelTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAnimationChannelTarget.swift; sourceTree = "<group>"; };
+		CCE931BE294FA44F00D388A0 /* GLTFAnimationSampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAnimationSampler.swift; sourceTree = "<group>"; };
+		CCE931BF294FA44F00D388A0 /* GLTFTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFTexture.swift; sourceTree = "<group>"; };
+		CCE931C0294FA44F00D388A0 /* GLTFTextureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFTextureInfo.swift; sourceTree = "<group>"; };
+		CCE931C1294FA44F00D388A0 /* GLTFSampler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFSampler.swift; sourceTree = "<group>"; };
+		CCE931C2294FA44F00D388A0 /* GLTFBufferView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFBufferView.swift; sourceTree = "<group>"; };
+		CCE931C3294FA44F00D388A0 /* GLTFMesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMesh.swift; sourceTree = "<group>"; };
+		CCE931C4294FA44F00D388A0 /* GLTFGlTFProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFGlTFProperty.swift; sourceTree = "<group>"; };
+		CCE931C5294FA44F00D388A0 /* GLTFBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFBuffer.swift; sourceTree = "<group>"; };
+		CCE931C6294FA44F00D388A0 /* GLTFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFImage.swift; sourceTree = "<group>"; };
+		CCE931C7294FA44F00D388A0 /* GLTFExtras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFExtras.swift; sourceTree = "<group>"; };
+		CCE931C8294FA44F00D388A0 /* GLTFAccessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAccessor.swift; sourceTree = "<group>"; };
+		CCE931C9294FA44F00D388A0 /* GLTFExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFExtension.swift; sourceTree = "<group>"; };
+		CCE931CA294FA44F00D388A0 /* GLTFMaterialNormalTextureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMaterialNormalTextureInfo.swift; sourceTree = "<group>"; };
+		CCE931CC294FA44F00D388A0 /* ExtensionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionList.swift; sourceTree = "<group>"; };
+		CCE931CE294FA44F00D388A0 /* GLTFVRM_VRMSpringBoneLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFVRM_VRMSpringBoneLogic.swift; sourceTree = "<group>"; };
+		CCE931CF294FA44F00D388A0 /* GLTFVRM_VRMSpringBone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFVRM_VRMSpringBone.swift; sourceTree = "<group>"; };
+		CCE931D0294FA44F00D388A0 /* GLTFVRM_VRMTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFVRM_VRMTypes.swift; sourceTree = "<group>"; };
+		CCE931D1294FA44F00D388A0 /* GLTFVRM_VRM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFVRM_VRM.swift; sourceTree = "<group>"; };
+		CCE931D2294FA44F00D388A0 /* GLTFVRM_VRMState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFVRM_VRMState.swift; sourceTree = "<group>"; };
+		CCE931D4294FA44F00D388A0 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift; sourceTree = "<group>"; };
+		CCE931D6294FA44F00D388A0 /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift; sourceTree = "<group>"; };
+		CCE931D7294FA44F00D388A0 /* GLTFAnimationChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAnimationChannel.swift; sourceTree = "<group>"; };
+		CCE931D8294FA44F00D388A0 /* GLTFMaterial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMaterial.swift; sourceTree = "<group>"; };
+		CCE931D9294FA44F00D388A0 /* GLTFSkin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFSkin.swift; sourceTree = "<group>"; };
+		CCE931DA294FA44F00D388A0 /* GLTFCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFCamera.swift; sourceTree = "<group>"; };
+		CCE931DB294FA44F00D388A0 /* GLTFAccessorSparse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAccessorSparse.swift; sourceTree = "<group>"; };
+		CCE931DC294FA44F00D388A0 /* GLTFMaterialOcclusionTextureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMaterialOcclusionTextureInfo.swift; sourceTree = "<group>"; };
+		CCE931DD294FA44F00D388A0 /* GLTFMaterialPbrMetallicRoughness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMaterialPbrMetallicRoughness.swift; sourceTree = "<group>"; };
+		CCE931DE294FA44F00D388A0 /* GLTFNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFNode.swift; sourceTree = "<group>"; };
+		CCE931DF294FA44F00D388A0 /* GLTFAccessorSparseValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAccessorSparseValues.swift; sourceTree = "<group>"; };
+		CCE931E0294FA44F00D388A0 /* GLTFAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAnimation.swift; sourceTree = "<group>"; };
+		CCE931E1294FA44F00D388A0 /* GLTFAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAsset.swift; sourceTree = "<group>"; };
+		CCE931E2294FA44F00D388A0 /* GLTFGlTFid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFGlTFid.swift; sourceTree = "<group>"; };
+		CCE931E3294FA44F00D388A0 /* GLTFAccessorSparseIndices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAccessorSparseIndices.swift; sourceTree = "<group>"; };
+		CCE931E4294FA44F00D388A0 /* GLTFCameraPerspective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFCameraPerspective.swift; sourceTree = "<group>"; };
+		CCE931E5294FA44F00D388A0 /* GLTFMeshPrimitive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMeshPrimitive.swift; sourceTree = "<group>"; };
+		CCE931E6294FA44F00D388A0 /* GLTFFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFFunctions.swift; sourceTree = "<group>"; };
+		CCE931E7294FA44F00D388A0 /* GLTFTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFTypes.swift; sourceTree = "<group>"; };
+		CCE931E8294FA44F00D388A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE931E9294FA44F00D388A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CCE931EB294FA44F00D388A0 /* convert.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = convert.js; sourceTree = "<group>"; };
+		CCE931EC294FA44F00D388A0 /* GLTFExtras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFExtras.swift; sourceTree = "<group>"; };
+		CCE931ED294FA44F00D388A0 /* GLTFExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFExtension.swift; sourceTree = "<group>"; };
+		CCE931F0294FA45000D388A0 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		CCE931F1294FA45000D388A0 /* GameSample.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = GameSample.entitlements; sourceTree = "<group>"; };
+		CCE931F2294FA45000D388A0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CCE931F3294FA45000D388A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCE931F5294FA45000D388A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CCE931F6294FA45000D388A0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCE931F7294FA45000D388A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE931F9294FA45000D388A0 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CCE931FA294FA45000D388A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCE931FC294FA45000D388A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCE931FE294FA45000D388A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCE931FF294FA45000D388A0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCE93200294FA45000D388A0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCE93202294FA45000D388A0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		CCE93203294FA45000D388A0 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		CCE93204294FA45000D388A0 /* GLTFSceneKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLTFSceneKit.xcodeproj; path = "../../../../../Downloads/GLTFSceneKit-master/GLTFSceneKit.xcodeproj"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC450A3B2941AD93009019BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC450A502941AD94009019BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC450A5A2941AD94009019BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC443A3A294FF52B009E8941 /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+				CC443A3D294FF549009E8941 /* minizip */,
+				CC443A49294FF549009E8941 /* QuickZip.swift */,
+				CC443A3B294FF549009E8941 /* Zip.h */,
+				CC443A3C294FF549009E8941 /* Zip.swift */,
+				CC443A4A294FF549009E8941 /* ZipUtilities.swift */,
+				CC443A4B294FF549009E8941 /* zlib */,
+			);
+			path = Zip;
+			sourceTree = "<group>";
+		};
+		CC443A3D294FF549009E8941 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				CC443A3E294FF549009E8941 /* unzip.c */,
+				CC443A3F294FF549009E8941 /* zip.c */,
+				CC443A40294FF549009E8941 /* ioapi.c */,
+				CC443A41294FF549009E8941 /* module */,
+				CC443A43294FF549009E8941 /* include */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		CC443A41294FF549009E8941 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				CC443A42294FF549009E8941 /* module.modulemap */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		CC443A43294FF549009E8941 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CC443A44294FF549009E8941 /* Minizip.h */,
+				CC443A45294FF549009E8941 /* crypt.h */,
+				CC443A46294FF549009E8941 /* zip.h */,
+				CC443A47294FF549009E8941 /* unzip.h */,
+				CC443A48294FF549009E8941 /* ioapi.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CC443A4B294FF549009E8941 /* zlib */ = {
+			isa = PBXGroup;
+			children = (
+				CC443A4C294FF549009E8941 /* module.modulemap */,
+			);
+			path = zlib;
+			sourceTree = "<group>";
+		};
+		CC450A352941AD93009019BE = {
+			isa = PBXGroup;
+			children = (
+				CC450A402941AD93009019BE /* ChatARKit */,
+				CCE931A1294FA42500D388A0 /* GLTFSceneKit */,
+				CC443A3A294FF52B009E8941 /* Zip */,
+				CC450A562941AD94009019BE /* ChatARKitTests */,
+				CC450A602941AD94009019BE /* ChatARKitUITests */,
+				CC450A3F2941AD93009019BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC450A3F2941AD93009019BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC450A3E2941AD93009019BE /* ChatARKit.app */,
+				CC450A532941AD94009019BE /* ChatARKitTests.xctest */,
+				CC450A5D2941AD94009019BE /* ChatARKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC450A402941AD93009019BE /* ChatARKit */ = {
+			isa = PBXGroup;
+			children = (
+				CCE2B54E2947113A00D53DD5 /* Engine */,
+				CC450A832945A38D009019BE /* Util */,
+				CC450A7C294594E6009019BE /* Networking */,
+				CC450A782942C960009019BE /* ggml-base.en.bin */,
+				CC450A702942B643009019BE /* Whisper */,
+				CC450A412941AD93009019BE /* AppDelegate.swift */,
+				CC450A712942B729009019BE /* ChatARKit-Bridging-Header.h */,
+				CC450A432941AD93009019BE /* Assets.scnassets */,
+				CC450A452941AD93009019BE /* ViewController.swift */,
+				CC443A59295044E0009E8941 /* AudioCaptureController.swift */,
+				CC450A472941AD93009019BE /* Main.storyboard */,
+				CC450A4A2941AD94009019BE /* Assets.xcassets */,
+				CC450A4C2941AD94009019BE /* LaunchScreen.storyboard */,
+			);
+			path = ChatARKit;
+			sourceTree = "<group>";
+		};
+		CC450A562941AD94009019BE /* ChatARKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC450A572941AD94009019BE /* ChatARKitTests.swift */,
+			);
+			path = ChatARKitTests;
+			sourceTree = "<group>";
+		};
+		CC450A602941AD94009019BE /* ChatARKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC450A612941AD94009019BE /* ChatARKitUITests.swift */,
+				CC450A632941AD94009019BE /* ChatARKitUITestsLaunchTests.swift */,
+			);
+			path = ChatARKitUITests;
+			sourceTree = "<group>";
+		};
+		CC450A702942B643009019BE /* Whisper */ = {
+			isa = PBXGroup;
+			children = (
+				CC450A732942B729009019BE /* ggml.c */,
+				CC450A722942B729009019BE /* ggml.h */,
+				CC450A742942B729009019BE /* whisper.cpp */,
+				CC450A752942B729009019BE /* whisper.h */,
+				CC450A7A294309EB009019BE /* Whisper.swift */,
+			);
+			path = Whisper;
+			sourceTree = "<group>";
+		};
+		CC450A7C294594E6009019BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CC450A7E29459505009019BE /* Connection.swift */,
+				CC450A7F29459505009019BE /* Messages.swift */,
+				CC450A7D29459505009019BE /* TCP.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CC450A832945A38D009019BE /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CC450A852945A3B9009019BE /* HexDump.swift */,
+				CC450A862945A3B9009019BE /* Stopwatch.swift */,
+				CC450A842945A3B9009019BE /* UtilNamespace.swift */,
+				CCE2B55529480BA700D53DD5 /* ARPlaneAnchor+Extensions.swift */,
+				CCE2B55729480BF300D53DD5 /* SCNNode+Extensions.swift */,
+				CCE2B55929480C2800D53DD5 /* float4x4+Extensions.swift */,
+				CCE2B55D294D923700D53DD5 /* SIMDAliases.swift */,
+				CCE2B55F294E4F4D00D53DD5 /* simd_float4x4+Extensions.swift */,
+				CC443A35294FECD9009E8941 /* simd_float3+Extensions.swift */,
+				CC443A5429503C38009E8941 /* CMSampleBuffer+Extensions.swift */,
+				CC443A5729503FFA009E8941 /* AVAudioPCMBuffer+Extensions.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CCE2B54E2947113A00D53DD5 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				CCE2B54F2947122200D53DD5 /* Engine.swift */,
+				CCE2B5512947158F00D53DD5 /* Entity.swift */,
+				CCE2B5532948040A00D53DD5 /* Plane.swift */,
+				CCE2B55B294C2D8C00D53DD5 /* CubeEntity.swift */,
+				CC443A38294FEE25009E8941 /* SketchfabEntity.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		CCE931A1294FA42500D388A0 /* GLTFSceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				CCE93204294FA45000D388A0 /* GLTFSceneKit.xcodeproj */,
+				CCE931A2294FA44F00D388A0 /* LICENSE */,
+				CCE93203294FA45000D388A0 /* Package.swift */,
+				CCE931E9294FA44F00D388A0 /* README.md */,
+				CCE931EE294FA45000D388A0 /* Sample */,
+				CCE931A3294FA44F00D388A0 /* Sources */,
+				CCE931EA294FA44F00D388A0 /* tool */,
+			);
+			path = GLTFSceneKit;
+			sourceTree = "<group>";
+		};
+		CCE931A3294FA44F00D388A0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931A4294FA44F00D388A0 /* GLTFSceneKit */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CCE931A4294FA44F00D388A0 /* GLTFSceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931A5294FA44F00D388A0 /* GLTFSceneKit+BundleFinder.swift */,
+				CCE931A6294FA44F00D388A0 /* GLTFSceneKit.h */,
+				CCE931A7294FA44F00D388A0 /* GLTFSceneSource.swift */,
+				CCE931A8294FA44F00D388A0 /* Resources */,
+				CCE931B5294FA44F00D388A0 /* GLTFUnarchiver.swift */,
+				CCE931B6294FA44F00D388A0 /* GLTFErrors.swift */,
+				CCE931B7294FA44F00D388A0 /* schema */,
+				CCE931E6294FA44F00D388A0 /* GLTFFunctions.swift */,
+				CCE931E7294FA44F00D388A0 /* GLTFTypes.swift */,
+				CCE931E8294FA44F00D388A0 /* Info.plist */,
+			);
+			path = GLTFSceneKit;
+			sourceTree = "<group>";
+		};
+		CCE931A8294FA44F00D388A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931A9294FA44F00D388A0 /* VRM */,
+				CCE931AD294FA44F00D388A0 /* GLTFShaderModifierSurface_alphaModeBlend.shader */,
+				CCE931AE294FA44F00D388A0 /* GLTFShaderModifierSurface.shader */,
+				CCE931AF294FA44F00D388A0 /* KHR_materials_pbrSpecularGlossiness */,
+				CCE931B3294FA44F00D388A0 /* GLTFShaderModifierFragment_alphaCutoff.shader */,
+				CCE931B4294FA44F00D388A0 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCE931A9294FA44F00D388A0 /* VRM */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931AA294FA44F00D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture.shader */,
+				CCE931AB294FA44F00D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture_Cutoff.shader */,
+				CCE931AC294FA44F00D388A0 /* GLTFShaderModifierSurface_VRMMToon.shader */,
+			);
+			path = VRM;
+			sourceTree = "<group>";
+		};
+		CCE931AF294FA44F00D388A0 /* KHR_materials_pbrSpecularGlossiness */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931B0294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader */,
+				CCE931B1294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader */,
+				CCE931B2294FA44F00D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader */,
+			);
+			path = KHR_materials_pbrSpecularGlossiness;
+			sourceTree = "<group>";
+		};
+		CCE931B7294FA44F00D388A0 /* schema */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931B8294FA44F00D388A0 /* GLTFScene.swift */,
+				CCE931B9294FA44F00D388A0 /* GLTFExtrasTargetNames.swift */,
+				CCE931BA294FA44F00D388A0 /* GLTFGlTFChildOfRootProperty.swift */,
+				CCE931BB294FA44F00D388A0 /* GLTFCameraOrthographic.swift */,
+				CCE931BC294FA44F00D388A0 /* GLTFGlTF.swift */,
+				CCE931BD294FA44F00D388A0 /* GLTFAnimationChannelTarget.swift */,
+				CCE931BE294FA44F00D388A0 /* GLTFAnimationSampler.swift */,
+				CCE931BF294FA44F00D388A0 /* GLTFTexture.swift */,
+				CCE931C0294FA44F00D388A0 /* GLTFTextureInfo.swift */,
+				CCE931C1294FA44F00D388A0 /* GLTFSampler.swift */,
+				CCE931C2294FA44F00D388A0 /* GLTFBufferView.swift */,
+				CCE931C3294FA44F00D388A0 /* GLTFMesh.swift */,
+				CCE931C4294FA44F00D388A0 /* GLTFGlTFProperty.swift */,
+				CCE931C5294FA44F00D388A0 /* GLTFBuffer.swift */,
+				CCE931C6294FA44F00D388A0 /* GLTFImage.swift */,
+				CCE931C7294FA44F00D388A0 /* GLTFExtras.swift */,
+				CCE931C8294FA44F00D388A0 /* GLTFAccessor.swift */,
+				CCE931C9294FA44F00D388A0 /* GLTFExtension.swift */,
+				CCE931CA294FA44F00D388A0 /* GLTFMaterialNormalTextureInfo.swift */,
+				CCE931CB294FA44F00D388A0 /* extensions */,
+				CCE931D7294FA44F00D388A0 /* GLTFAnimationChannel.swift */,
+				CCE931D8294FA44F00D388A0 /* GLTFMaterial.swift */,
+				CCE931D9294FA44F00D388A0 /* GLTFSkin.swift */,
+				CCE931DA294FA44F00D388A0 /* GLTFCamera.swift */,
+				CCE931DB294FA44F00D388A0 /* GLTFAccessorSparse.swift */,
+				CCE931DC294FA44F00D388A0 /* GLTFMaterialOcclusionTextureInfo.swift */,
+				CCE931DD294FA44F00D388A0 /* GLTFMaterialPbrMetallicRoughness.swift */,
+				CCE931DE294FA44F00D388A0 /* GLTFNode.swift */,
+				CCE931DF294FA44F00D388A0 /* GLTFAccessorSparseValues.swift */,
+				CCE931E0294FA44F00D388A0 /* GLTFAnimation.swift */,
+				CCE931E1294FA44F00D388A0 /* GLTFAsset.swift */,
+				CCE931E2294FA44F00D388A0 /* GLTFGlTFid.swift */,
+				CCE931E3294FA44F00D388A0 /* GLTFAccessorSparseIndices.swift */,
+				CCE931E4294FA44F00D388A0 /* GLTFCameraPerspective.swift */,
+				CCE931E5294FA44F00D388A0 /* GLTFMeshPrimitive.swift */,
+			);
+			path = schema;
+			sourceTree = "<group>";
+		};
+		CCE931CB294FA44F00D388A0 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931CC294FA44F00D388A0 /* ExtensionList.swift */,
+				CCE931CD294FA44F00D388A0 /* VRM */,
+				CCE931D3294FA44F00D388A0 /* KHR_materials_common */,
+				CCE931D5294FA44F00D388A0 /* KHR_materials_pbrSpecularGlossiness */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		CCE931CD294FA44F00D388A0 /* VRM */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931CE294FA44F00D388A0 /* GLTFVRM_VRMSpringBoneLogic.swift */,
+				CCE931CF294FA44F00D388A0 /* GLTFVRM_VRMSpringBone.swift */,
+				CCE931D0294FA44F00D388A0 /* GLTFVRM_VRMTypes.swift */,
+				CCE931D1294FA44F00D388A0 /* GLTFVRM_VRM.swift */,
+				CCE931D2294FA44F00D388A0 /* GLTFVRM_VRMState.swift */,
+			);
+			path = VRM;
+			sourceTree = "<group>";
+		};
+		CCE931D3294FA44F00D388A0 /* KHR_materials_common */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931D4294FA44F00D388A0 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift */,
+			);
+			path = KHR_materials_common;
+			sourceTree = "<group>";
+		};
+		CCE931D5294FA44F00D388A0 /* KHR_materials_pbrSpecularGlossiness */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931D6294FA44F00D388A0 /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift */,
+			);
+			path = KHR_materials_pbrSpecularGlossiness;
+			sourceTree = "<group>";
+		};
+		CCE931EA294FA44F00D388A0 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931EB294FA44F00D388A0 /* convert.js */,
+				CCE931EC294FA44F00D388A0 /* GLTFExtras.swift */,
+				CCE931ED294FA44F00D388A0 /* GLTFExtension.swift */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		CCE931EE294FA45000D388A0 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931EF294FA45000D388A0 /* macOS */,
+				CCE931F8294FA45000D388A0 /* iOS */,
+				CCE93201294FA45000D388A0 /* Common */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
+		CCE931EF294FA45000D388A0 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931F0294FA45000D388A0 /* GameView.swift */,
+				CCE931F1294FA45000D388A0 /* GameSample.entitlements */,
+				CCE931F2294FA45000D388A0 /* GameViewController.swift */,
+				CCE931F3294FA45000D388A0 /* Assets.xcassets */,
+				CCE931F4294FA45000D388A0 /* MainMenu.xib */,
+				CCE931F6294FA45000D388A0 /* AppDelegate.swift */,
+				CCE931F7294FA45000D388A0 /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		CCE931F8294FA45000D388A0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CCE931F9294FA45000D388A0 /* GameViewController.swift */,
+				CCE931FA294FA45000D388A0 /* Assets.xcassets */,
+				CCE931FB294FA45000D388A0 /* LaunchScreen.storyboard */,
+				CCE931FD294FA45000D388A0 /* Main.storyboard */,
+				CCE931FF294FA45000D388A0 /* AppDelegate.swift */,
+				CCE93200294FA45000D388A0 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		CCE93201294FA45000D388A0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CCE93202294FA45000D388A0 /* art.scnassets */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CCE93205294FA45000D388A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCE9320C294FA45000D388A0 /* GLTFSceneKit.framework */,
+				CCE9320E294FA45000D388A0 /* GLTFSceneKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC450A3D2941AD93009019BE /* ChatARKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC450A672941AD94009019BE /* Build configuration list for PBXNativeTarget "ChatARKit" */;
+			buildPhases = (
+				CC450A3A2941AD93009019BE /* Sources */,
+				CC450A3B2941AD93009019BE /* Frameworks */,
+				CC450A3C2941AD93009019BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCE93262294FA4A300D388A0 /* PBXTargetDependency */,
+			);
+			name = ChatARKit;
+			productName = ChatARKit;
+			productReference = CC450A3E2941AD93009019BE /* ChatARKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC450A522941AD94009019BE /* ChatARKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC450A6A2941AD94009019BE /* Build configuration list for PBXNativeTarget "ChatARKitTests" */;
+			buildPhases = (
+				CC450A4F2941AD94009019BE /* Sources */,
+				CC450A502941AD94009019BE /* Frameworks */,
+				CC450A512941AD94009019BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC450A552941AD94009019BE /* PBXTargetDependency */,
+			);
+			name = ChatARKitTests;
+			productName = ChatARKitTests;
+			productReference = CC450A532941AD94009019BE /* ChatARKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC450A5C2941AD94009019BE /* ChatARKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC450A6D2941AD94009019BE /* Build configuration list for PBXNativeTarget "ChatARKitUITests" */;
+			buildPhases = (
+				CC450A592941AD94009019BE /* Sources */,
+				CC450A5A2941AD94009019BE /* Frameworks */,
+				CC450A5B2941AD94009019BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC450A5F2941AD94009019BE /* PBXTargetDependency */,
+			);
+			name = ChatARKitUITests;
+			productName = ChatARKitUITests;
+			productReference = CC450A5D2941AD94009019BE /* ChatARKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC450A362941AD93009019BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					CC450A3D2941AD93009019BE = {
+						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
+					};
+					CC450A522941AD94009019BE = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = CC450A3D2941AD93009019BE;
+					};
+					CC450A5C2941AD94009019BE = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = CC450A3D2941AD93009019BE;
+					};
+				};
+			};
+			buildConfigurationList = CC450A392941AD93009019BE /* Build configuration list for PBXProject "ChatARKit" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC450A352941AD93009019BE;
+			productRefGroup = CC450A3F2941AD93009019BE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CCE93205294FA45000D388A0 /* Products */;
+					ProjectRef = CCE93204294FA45000D388A0 /* GLTFSceneKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				CC450A3D2941AD93009019BE /* ChatARKit */,
+				CC450A522941AD94009019BE /* ChatARKitTests */,
+				CC450A5C2941AD94009019BE /* ChatARKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CCE9320C294FA45000D388A0 /* GLTFSceneKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTFSceneKit.framework;
+			remoteRef = CCE9320B294FA45000D388A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CCE9320E294FA45000D388A0 /* GLTFSceneKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GLTFSceneKit.framework;
+			remoteRef = CCE9320D294FA45000D388A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC450A3C2941AD93009019BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE9321A294FA45000D388A0 /* GLTFShaderModifierSurface.shader in Resources */,
+				CCE93219294FA45000D388A0 /* GLTFShaderModifierSurface_alphaModeBlend.shader in Resources */,
+				CC450A442941AD93009019BE /* Assets.scnassets in Resources */,
+				CCE93218294FA45000D388A0 /* GLTFShaderModifierSurface_VRMMToon.shader in Resources */,
+				CC450A4E2941AD94009019BE /* LaunchScreen.storyboard in Resources */,
+				CCE9321B294FA45000D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness.shader in Resources */,
+				CCE9321D294FA45000D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader in Resources */,
+				CCE9321C294FA45000D388A0 /* GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader in Resources */,
+				CCE93217294FA45000D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture_Cutoff.shader in Resources */,
+				CCE9321E294FA45000D388A0 /* GLTFShaderModifierFragment_alphaCutoff.shader in Resources */,
+				CC450A4B2941AD94009019BE /* Assets.xcassets in Resources */,
+				CC450A492941AD93009019BE /* Main.storyboard in Resources */,
+				CCE9321F294FA45000D388A0 /* GLTFShaderModifierSurface_doubleSidedWorkaround.shader in Resources */,
+				CCE93213294FA45000D388A0 /* LICENSE in Resources */,
+				CCE93216294FA45000D388A0 /* GLTFShaderModifierFragment_VRMUnlitTexture.shader in Resources */,
+				CC450A792942C960009019BE /* ggml-base.en.bin in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC450A512941AD94009019BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC450A5B2941AD94009019BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC450A3A2941AD93009019BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCE93215294FA45000D388A0 /* GLTFSceneSource.swift in Sources */,
+				CCE93235294FA45000D388A0 /* ExtensionList.swift in Sources */,
+				CC450A462941AD93009019BE /* ViewController.swift in Sources */,
+				CCE9323F294FA45000D388A0 /* GLTFSkin.swift in Sources */,
+				CCE93242294FA45000D388A0 /* GLTFMaterialOcclusionTextureInfo.swift in Sources */,
+				CC443A5529503C38009E8941 /* CMSampleBuffer+Extensions.swift in Sources */,
+				CCE93237294FA45000D388A0 /* GLTFVRM_VRMSpringBone.swift in Sources */,
+				CCE93245294FA45000D388A0 /* GLTFAccessorSparseValues.swift in Sources */,
+				CCE2B5502947122200D53DD5 /* Engine.swift in Sources */,
+				CCE93229294FA45000D388A0 /* GLTFTexture.swift in Sources */,
+				CCE2B560294E4F4D00D53DD5 /* simd_float4x4+Extensions.swift in Sources */,
+				CCE93224294FA45000D388A0 /* GLTFGlTFChildOfRootProperty.swift in Sources */,
+				CCE2B55629480BA700D53DD5 /* ARPlaneAnchor+Extensions.swift in Sources */,
+				CCE9324A294FA45000D388A0 /* GLTFCameraPerspective.swift in Sources */,
+				CCE9324C294FA45000D388A0 /* GLTFFunctions.swift in Sources */,
+				CCE93236294FA45000D388A0 /* GLTFVRM_VRMSpringBoneLogic.swift in Sources */,
+				CCE93233294FA45000D388A0 /* GLTFExtension.swift in Sources */,
+				CCE93214294FA45000D388A0 /* GLTFSceneKit+BundleFinder.swift in Sources */,
+				CCE93232294FA45000D388A0 /* GLTFAccessor.swift in Sources */,
+				CC443A52294FF549009E8941 /* ZipUtilities.swift in Sources */,
+				CC443A4F294FF549009E8941 /* zip.c in Sources */,
+				CCE93227294FA45000D388A0 /* GLTFAnimationChannelTarget.swift in Sources */,
+				CCE9323B294FA45000D388A0 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift in Sources */,
+				CCE93247294FA45000D388A0 /* GLTFAsset.swift in Sources */,
+				CC450A8229459505009019BE /* Messages.swift in Sources */,
+				CC450A8029459505009019BE /* TCP.swift in Sources */,
+				CCE9323A294FA45000D388A0 /* GLTFVRM_VRMState.swift in Sources */,
+				CC443A51294FF549009E8941 /* QuickZip.swift in Sources */,
+				CC450A872945A3B9009019BE /* UtilNamespace.swift in Sources */,
+				CCE93253294FA45000D388A0 /* GameView.swift in Sources */,
+				CCE93246294FA45000D388A0 /* GLTFAnimation.swift in Sources */,
+				CCE9322F294FA45000D388A0 /* GLTFBuffer.swift in Sources */,
+				CC450A892945A3B9009019BE /* Stopwatch.swift in Sources */,
+				CCE9322E294FA45000D388A0 /* GLTFGlTFProperty.swift in Sources */,
+				CCE93225294FA45000D388A0 /* GLTFCameraOrthographic.swift in Sources */,
+				CCE2B5542948040A00D53DD5 /* Plane.swift in Sources */,
+				CCE9323E294FA45000D388A0 /* GLTFMaterial.swift in Sources */,
+				CCE2B55829480BF300D53DD5 /* SCNNode+Extensions.swift in Sources */,
+				CC450A7B294309EB009019BE /* Whisper.swift in Sources */,
+				CCE9322A294FA45000D388A0 /* GLTFTextureInfo.swift in Sources */,
+				CCE9322D294FA45000D388A0 /* GLTFMesh.swift in Sources */,
+				CCE2B55E294D923700D53DD5 /* SIMDAliases.swift in Sources */,
+				CC450A422941AD93009019BE /* AppDelegate.swift in Sources */,
+				CCE93230294FA45000D388A0 /* GLTFImage.swift in Sources */,
+				CC443A4D294FF549009E8941 /* Zip.swift in Sources */,
+				CCE93222294FA45000D388A0 /* GLTFScene.swift in Sources */,
+				CC450A772942B729009019BE /* whisper.cpp in Sources */,
+				CCE93238294FA45000D388A0 /* GLTFVRM_VRMTypes.swift in Sources */,
+				CC450A882945A3B9009019BE /* HexDump.swift in Sources */,
+				CCE93223294FA45000D388A0 /* GLTFExtrasTargetNames.swift in Sources */,
+				CCE93243294FA45000D388A0 /* GLTFMaterialPbrMetallicRoughness.swift in Sources */,
+				CCE93240294FA45000D388A0 /* GLTFCamera.swift in Sources */,
+				CCE93249294FA45000D388A0 /* GLTFAccessorSparseIndices.swift in Sources */,
+				CCE93220294FA45000D388A0 /* GLTFUnarchiver.swift in Sources */,
+				CCE93226294FA45000D388A0 /* GLTFGlTF.swift in Sources */,
+				CCE9322C294FA45000D388A0 /* GLTFBufferView.swift in Sources */,
+				CCE9322B294FA45000D388A0 /* GLTFSampler.swift in Sources */,
+				CCE2B5522947158F00D53DD5 /* Entity.swift in Sources */,
+				CC443A36294FECD9009E8941 /* simd_float3+Extensions.swift in Sources */,
+				CCE93244294FA45000D388A0 /* GLTFNode.swift in Sources */,
+				CC443A4E294FF549009E8941 /* unzip.c in Sources */,
+				CC443A50294FF549009E8941 /* ioapi.c in Sources */,
+				CCE9323D294FA45000D388A0 /* GLTFAnimationChannel.swift in Sources */,
+				CCE93248294FA45000D388A0 /* GLTFGlTFid.swift in Sources */,
+				CCE93228294FA45000D388A0 /* GLTFAnimationSampler.swift in Sources */,
+				CC443A5A295044E0009E8941 /* AudioCaptureController.swift in Sources */,
+				CCE93231294FA45000D388A0 /* GLTFExtras.swift in Sources */,
+				CCE9324B294FA45000D388A0 /* GLTFMeshPrimitive.swift in Sources */,
+				CCE93239294FA45000D388A0 /* GLTFVRM_VRM.swift in Sources */,
+				CCE2B55A29480C2800D53DD5 /* float4x4+Extensions.swift in Sources */,
+				CCE2B55C294C2D8C00D53DD5 /* CubeEntity.swift in Sources */,
+				CC443A39294FEE25009E8941 /* SketchfabEntity.swift in Sources */,
+				CCE9323C294FA45000D388A0 /* GLTFKHRMaterialsPbrSpecularGlossiness_GLTFKHRMaterialsPbrSpecularGlossiness.swift in Sources */,
+				CCE9324D294FA45000D388A0 /* GLTFTypes.swift in Sources */,
+				CCE93241294FA45000D388A0 /* GLTFAccessorSparse.swift in Sources */,
+				CCE93221294FA45000D388A0 /* GLTFErrors.swift in Sources */,
+				CC443A5829503FFA009E8941 /* AVAudioPCMBuffer+Extensions.swift in Sources */,
+				CC450A762942B729009019BE /* ggml.c in Sources */,
+				CCE93234294FA45000D388A0 /* GLTFMaterialNormalTextureInfo.swift in Sources */,
+				CC450A8129459505009019BE /* Connection.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC450A4F2941AD94009019BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC450A582941AD94009019BE /* ChatARKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC450A592941AD94009019BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC450A642941AD94009019BE /* ChatARKitUITestsLaunchTests.swift in Sources */,
+				CC450A622941AD94009019BE /* ChatARKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC450A552941AD94009019BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC450A3D2941AD93009019BE /* ChatARKit */;
+			targetProxy = CC450A542941AD94009019BE /* PBXContainerItemProxy */;
+		};
+		CC450A5F2941AD94009019BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC450A3D2941AD93009019BE /* ChatARKit */;
+			targetProxy = CC450A5E2941AD94009019BE /* PBXContainerItemProxy */;
+		};
+		CCE93262294FA4A300D388A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GLTFSceneKit_iOS;
+			targetProxy = CCE93261294FA4A300D388A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC450A472941AD93009019BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC450A482941AD93009019BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC450A4C2941AD94009019BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC450A4D2941AD94009019BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CCE931F4294FA45000D388A0 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCE931F5294FA45000D388A0 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CCE931FB294FA45000D388A0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCE931FC294FA45000D388A0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CCE931FD294FA45000D388A0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCE931FE294FA45000D388A0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC450A652941AD94009019BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ChatARKit/GLTFKit2/;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC450A662941AD94009019BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ChatARKit/GLTFKit2/;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC450A682941AD94009019BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T2874S592;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = ChatARKit/;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Record voice commands.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cambrianmoment.ChatARKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChatARKit/ChatARKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC450A692941AD94009019BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T2874S592;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = ChatARKit/;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Record voice commands.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cambrianmoment.ChatARKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChatARKit/ChatARKit-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC450A6B2941AD94009019BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T2874S592;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cambrianmoment.ChatARKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatARKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatARKit";
+			};
+			name = Debug;
+		};
+		CC450A6C2941AD94009019BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T2874S592;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cambrianmoment.ChatARKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatARKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatARKit";
+			};
+			name = Release;
+		};
+		CC450A6E2941AD94009019BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T2874S592;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cambrianmoment.ChatARKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChatARKit;
+			};
+			name = Debug;
+		};
+		CC450A6F2941AD94009019BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7T2874S592;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cambrianmoment.ChatARKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChatARKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC450A392941AD93009019BE /* Build configuration list for PBXProject "ChatARKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC450A652941AD94009019BE /* Debug */,
+				CC450A662941AD94009019BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC450A672941AD94009019BE /* Build configuration list for PBXNativeTarget "ChatARKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC450A682941AD94009019BE /* Debug */,
+				CC450A692941AD94009019BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC450A6A2941AD94009019BE /* Build configuration list for PBXNativeTarget "ChatARKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC450A6B2941AD94009019BE /* Debug */,
+				CC450A6C2941AD94009019BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC450A6D2941AD94009019BE /* Build configuration list for PBXNativeTarget "ChatARKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC450A6E2941AD94009019BE /* Debug */,
+				CC450A6F2941AD94009019BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC450A362941AD93009019BE /* Project object */;
+}
