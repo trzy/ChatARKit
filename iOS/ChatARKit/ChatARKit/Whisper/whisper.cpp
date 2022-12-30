@@ -2681,7 +2681,7 @@ int whisper_full(
         //}
         //printf("\n\n");
 
-        // the accumulated transcription in the current interation
+        // the accumulated transcription in the current iteration
         int result_len = 0;
         tokens_cur.clear();
 
