@@ -1,8 +1,8 @@
 #
 # chatgpt.py
-# Bart Trzynadlowski
+# Bart Trzynadlowski & Yuchen Ding
 #
-# ChatGPT relay server. Relays prompts received via a TCP socket to ChatGPT and
+# ChatGPT API. Relays prompts received via a TCP socket to ChatGPT and
 # returns the results.
 #
 
@@ -13,7 +13,7 @@ import sys
 import time
 import weakref
 
-from pyChatGPT import ChatGPT
+import openai
 
 from networking.tcp import Server
 from networking.tcp import Session
@@ -21,8 +21,29 @@ from networking.message_handling import handler
 from networking.message_handling import MessageHandler
 from networking.messages import *
 
+import json
 
-#
+
+class ChatGPT:
+  def __init__(self):
+    openai.api_key = "YOUR_API_KEY"
+    self._conversation = []
+
+  def ask_question(self,question):
+      model_engine = "gpt-3.5-turbo"
+      
+      self._conversation.append({"role":"user","content":question})
+
+      response = openai.ChatCompletion.create(
+          model = model_engine,
+          messages = self._conversation,
+      )
+
+      answer = response["choices"][0]
+
+      return answer
+
+
 # ChatGPT Task
 #
 # Receives prompts via a queue and queries ChatGPT.
@@ -32,17 +53,18 @@ class ChatGPTTask:
   def __init__(self, prompt_queue: asyncio.Queue, num_prompts: int):
     self._prompt_queue = prompt_queue
     self._num_prompts = num_prompts if num_prompts > 0 else None  # if num_prompts <= 0, accept unlimited prompts
-    self._session_token = input("Enter session token >>>")
-    self._chat_gpt = ChatGPT(self._session_token)
+    # self._session_token = input("Enter session token >>>")
+    self._chat_gpt = ChatGPT()
 
   async def run(self):
     # Process prompts
-    self._chat_gpt.reset_conversation()
+    
     while (self._num_prompts is None) or self._num_prompts > 0:
       # Process prompt and await response
       prompt, callback = await self._prompt_queue.get()
-      response = self._send_prompt(prompt = prompt)
+      response = self._send_prompt(prompt = prompt) # 这里发送prompt
 
+      print(response)
       # Parse response
       prose, code = self._parse_response(response = response)
 
@@ -65,7 +87,7 @@ class ChatGPTTask:
         self._num_prompts -= 1
 
   def _send_prompt(self, prompt):
-    return self._chat_gpt.send_message(prompt)
+    return self._chat_gpt.ask_question(prompt)
     #time.sleep(20)  # simulate a long delay
     #return {"message": "``` /* Insert test code here */ ```"}
 
@@ -77,8 +99,8 @@ class ChatGPTTask:
     code = []
 
     # Separate into alternating prose and code segments
-    segments = response["message"].split("```")
-
+    segments = response["message"]["content"].split("```")
+    print(segments)
     # Separate code from prose
     for i in range(len(segments)):
       if (i & 1) == 0:
@@ -86,16 +108,7 @@ class ChatGPTTask:
       else:
         code.append(segments[i].strip())  # remove whitespace at the beginning and end of code segments
 
-    # Strip code of junk
-    prefix = "Copy code`"
-    postfix = "`"
-    for i in range(len(code)):
-      if code[i].startswith(prefix):
-        code[i] = code[i][len(prefix):]
-      if code[i].endswith(postfix):
-        code[i] = code[i][0:-len(postfix)]
-      code[i] = code[i].replace("\\", "")
-
+    code = prose
     # Return single strings
     return "".join(prose), "".join(code)
 
