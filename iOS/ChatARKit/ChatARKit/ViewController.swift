@@ -13,28 +13,15 @@ import SceneKit
 import ARKit
 import AVFoundation
 
-class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate {
+class ViewController: UIViewController {
     private var _engine: Engine?
     private var _model: Whisper?
     private var _audioCapture: AudioCaptureController?
+    private let _chatGPT = ChatGPT()
 
     @IBOutlet var sceneView: ARSCNView!
-    @IBOutlet weak var connectionView: UIView!
-    @IBOutlet weak var hostname: UITextField!
-    @IBOutlet weak var port: UITextField!
-    @IBOutlet weak var connectButton: UIButton!
-    @IBOutlet weak var connectionProgressLabel: UILabel!
-    @IBOutlet weak var connectionErrorLabel: UILabel!
     @IBOutlet weak var toggleRecordButton: UIButton!
     @IBOutlet weak var textView: UITextView!
-
-    @IBAction func onConnectButtonPressed(_ sender: Any) {
-        // Try to establish connection to ChatGPT Python server
-        connectionErrorLabel.isHidden = true
-        connectButton.isHidden = true
-        connectionProgressLabel.isHidden = false
-        tryConnect(delay: 0)
-    }
 
     @IBAction func onToggleRecordButtonPressed(_ sender: Any) {
         guard let audioCapture = _audioCapture else {
@@ -66,8 +53,8 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
                                 self.toggleRecordButton.tintColor = UIColor.systemBlue
                                 self.toggleRecordButton.isHidden = false
 
-                                // Send prompt to ChatGPT
-                                self.sendToChatGPT(prompt: completeText)
+                                // Send user's command to ChatGPT
+                                self._chatGPT.send(command: completeText, completion: self.onCodeReceived)
                             }
                         }
                     }
@@ -89,9 +76,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        hostname.delegate = self
-        port.delegate = self
-
         // Create AR engine
         _engine = Engine(sceneView: sceneView)
 
@@ -110,9 +94,6 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
 
         // Start AR experience
         _engine?.start()
-
-        // Disable record button but enable connection UI
-        showConnectionView(visible: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -120,86 +101,8 @@ class ViewController: UIViewController, UITextFieldDelegate, ConnectionDelegate 
         _engine?.pause()
     }
 
-    private func showConnectionView(visible: Bool) {
-        toggleRecordButton.isHidden = visible
-        connectionView.isHidden = !visible
-        connectButton.isHidden = false
-        connectionProgressLabel.isHidden = true // no connection in progress yet
-        connectionErrorLabel.isHidden = true    // no error yet!
-    }
-
-    // MARK: - UITextFieldDelegate
-
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-
-    // MARK: - Connection to ChatGPT Server, ConnectionDelegate
-
-    private var _client: TCPConnection?
-    private var _connection: Connection?
-
-    private func tryConnect(delay: TimeInterval) {
-        _client = nil
-        _connection = nil
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-            if let self = self, let hostname = self.hostname.text, let portStr = self.port.text, let port = UInt16(portStr) {
-                self._client = TCPConnection(host: hostname, port: port, delegate: self, queue: DispatchQueue.main)
-                if self._client == nil {
-                    print("[ViewController] Retrying connection in 1 second...")
-                    self.tryConnect(delay: 1)
-                }
-            }
-        }
-    }
-
-    public func onConnect(from connection: Connection) {
-        _connection = connection
-        _connection?.send(HelloMessage(message: "Hello from ChatARKit"))
-        print("Connected!")
-        showConnectionView(visible: false)
-    }
-
-    public func onDisconnect(from connection: Connection) {
-        print("[ViewController] Disconnected from \(connection)")
-        showConnectionView(visible: true)
-        connectionErrorLabel.isHidden = false
-        connectionProgressLabel.isHidden = true
-        if _connection == nil {
-            // Never connected in the first place
-            connectionErrorLabel.text = "Connection failed."
-        } else {
-            // Disconnect
-            connectionErrorLabel.text = "Disconnected."
-        }
-    }
-
-    public func onMessageReceived(from connection: Connection, id: String, data: Data) {
-        let decoder = JSONDecoder()
-        do {
-            switch id {
-            case HelloMessage.id:
-                let msg = try decoder.decode(HelloMessage.self, from: data)
-                print("[ViewController] Hello message received: \(msg.message)")
-            case ChatGPTResponseMessage.id:
-                let msg = try decoder.decode(ChatGPTResponseMessage.self, from: data)
-                print("[ViewController] ChatGPT response message received. Code:\n\(msg.code)")
-                _engine?.runCode(code: msg.code)
-            default:
-                break
-            }
-        }
-        catch {
-            print("[ViewController] Failed to decode message")
-            Util.hexDump(data)
-        }
-    }
-
-    private func sendToChatGPT(prompt: String) {
-        // Augment the user's prompt with additional material
-        if let augmentedPrompt = _engine?.augmentPrompt(prompt: prompt) {
-            _connection?.send(ChatGPTPromptMessage(prompt: augmentedPrompt))
-        }
+    private func onCodeReceived(_ code: String) {
+        // Run the code received from ChatGPT
+        _engine?.runCode(code: code)
     }
 }

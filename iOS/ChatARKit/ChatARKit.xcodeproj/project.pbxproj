@@ -31,12 +31,11 @@
 		CC450A772942B729009019BE /* whisper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC450A742942B729009019BE /* whisper.cpp */; };
 		CC450A792942C960009019BE /* ggml-base.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = CC450A782942C960009019BE /* ggml-base.en.bin */; };
 		CC450A7B294309EB009019BE /* Whisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7A294309EB009019BE /* Whisper.swift */; };
-		CC450A8029459505009019BE /* TCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7D29459505009019BE /* TCP.swift */; };
-		CC450A8129459505009019BE /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7E29459505009019BE /* Connection.swift */; };
-		CC450A8229459505009019BE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A7F29459505009019BE /* Messages.swift */; };
 		CC450A872945A3B9009019BE /* UtilNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A842945A3B9009019BE /* UtilNamespace.swift */; };
 		CC450A882945A3B9009019BE /* HexDump.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A852945A3B9009019BE /* HexDump.swift */; };
 		CC450A892945A3B9009019BE /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC450A862945A3B9009019BE /* Stopwatch.swift */; };
+		CC60616829D3D2F600FBFF11 /* ChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60616729D3D2F600FBFF11 /* ChatGPT.swift */; };
+		CC60616A29D3F92600FBFF11 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60616929D3F92600FBFF11 /* APIKeys.swift */; };
 		CCE2B5502947122200D53DD5 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B54F2947122200D53DD5 /* Engine.swift */; };
 		CCE2B5522947158F00D53DD5 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B5512947158F00D53DD5 /* Entity.swift */; };
 		CCE2B5542948040A00D53DD5 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2B5532948040A00D53DD5 /* Plane.swift */; };
@@ -185,12 +184,11 @@
 		CC450A752942B729009019BE /* whisper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whisper.h; sourceTree = "<group>"; };
 		CC450A782942C960009019BE /* ggml-base.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-base.en.bin"; sourceTree = "<group>"; };
 		CC450A7A294309EB009019BE /* Whisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whisper.swift; sourceTree = "<group>"; };
-		CC450A7D29459505009019BE /* TCP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCP.swift; sourceTree = "<group>"; };
-		CC450A7E29459505009019BE /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		CC450A7F29459505009019BE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		CC450A842945A3B9009019BE /* UtilNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilNamespace.swift; sourceTree = "<group>"; };
 		CC450A852945A3B9009019BE /* HexDump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexDump.swift; sourceTree = "<group>"; };
 		CC450A862945A3B9009019BE /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		CC60616729D3D2F600FBFF11 /* ChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPT.swift; sourceTree = "<group>"; };
+		CC60616929D3F92600FBFF11 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		CCE2B54F2947122200D53DD5 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		CCE2B5512947158F00D53DD5 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		CCE2B5532948040A00D53DD5 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
@@ -388,7 +386,6 @@
 			children = (
 				CCE2B54E2947113A00D53DD5 /* Engine */,
 				CC450A832945A38D009019BE /* Util */,
-				CC450A7C294594E6009019BE /* Networking */,
 				CC450A782942C960009019BE /* ggml-base.en.bin */,
 				CC450A702942B643009019BE /* Whisper */,
 				CC450A412941AD93009019BE /* AppDelegate.swift */,
@@ -399,6 +396,7 @@
 				CC450A472941AD93009019BE /* Main.storyboard */,
 				CC450A4A2941AD94009019BE /* Assets.xcassets */,
 				CC450A4C2941AD94009019BE /* LaunchScreen.storyboard */,
+				CC60616929D3F92600FBFF11 /* APIKeys.swift */,
 			);
 			path = ChatARKit;
 			sourceTree = "<group>";
@@ -432,16 +430,6 @@
 			path = Whisper;
 			sourceTree = "<group>";
 		};
-		CC450A7C294594E6009019BE /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				CC450A7E29459505009019BE /* Connection.swift */,
-				CC450A7F29459505009019BE /* Messages.swift */,
-				CC450A7D29459505009019BE /* TCP.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		CC450A832945A38D009019BE /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +456,7 @@
 				CCE2B5532948040A00D53DD5 /* Plane.swift */,
 				CCE2B55B294C2D8C00D53DD5 /* CubeEntity.swift */,
 				CC443A38294FEE25009E8941 /* SketchfabEntity.swift */,
+				CC60616729D3D2F600FBFF11 /* ChatGPT.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -865,6 +854,7 @@
 				CCE93242294FA45000D388A0 /* GLTFMaterialOcclusionTextureInfo.swift in Sources */,
 				CC443A5529503C38009E8941 /* CMSampleBuffer+Extensions.swift in Sources */,
 				CCE93237294FA45000D388A0 /* GLTFVRM_VRMSpringBone.swift in Sources */,
+				CC60616A29D3F92600FBFF11 /* APIKeys.swift in Sources */,
 				CCE93245294FA45000D388A0 /* GLTFAccessorSparseValues.swift in Sources */,
 				CCE2B5502947122200D53DD5 /* Engine.swift in Sources */,
 				CCE93229294FA45000D388A0 /* GLTFTexture.swift in Sources */,
@@ -879,11 +869,10 @@
 				CCE93232294FA45000D388A0 /* GLTFAccessor.swift in Sources */,
 				CC443A52294FF549009E8941 /* ZipUtilities.swift in Sources */,
 				CC443A4F294FF549009E8941 /* zip.c in Sources */,
+				CC60616829D3D2F600FBFF11 /* ChatGPT.swift in Sources */,
 				CCE93227294FA45000D388A0 /* GLTFAnimationChannelTarget.swift in Sources */,
 				CCE9323B294FA45000D388A0 /* GLTFKHRMaterialsCommon_GLTFKHRMaterialsCommon.swift in Sources */,
 				CCE93247294FA45000D388A0 /* GLTFAsset.swift in Sources */,
-				CC450A8229459505009019BE /* Messages.swift in Sources */,
-				CC450A8029459505009019BE /* TCP.swift in Sources */,
 				CCE9323A294FA45000D388A0 /* GLTFVRM_VRMState.swift in Sources */,
 				CC443A51294FF549009E8941 /* QuickZip.swift in Sources */,
 				CC450A872945A3B9009019BE /* UtilNamespace.swift in Sources */,
@@ -937,7 +926,6 @@
 				CC443A5829503FFA009E8941 /* AVAudioPCMBuffer+Extensions.swift in Sources */,
 				CC450A762942B729009019BE /* ggml.c in Sources */,
 				CCE93234294FA45000D388A0 /* GLTFMaterialNormalTextureInfo.swift in Sources */,
-				CC450A8129459505009019BE /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
