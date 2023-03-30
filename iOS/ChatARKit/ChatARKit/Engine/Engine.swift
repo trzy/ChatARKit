@@ -46,32 +46,6 @@ public class Engine: NSObject, ARSCNViewDelegate, ARSessionDelegate {
         _sceneView.session.pause()
     }
 
-    /// Wraps the user prompt in more context about the system to help ChatGPT generate usable code.
-    public func augmentPrompt(prompt: String) -> String {
-        return """
-Assume:
-- A function createEntity() exists that takes only a string describing the object (for example, 'tree frog', 'cube', or 'rocket ship'). The return value is the object.
-- Objects returned by createEntity() have only three properties, each of them an array of length 3: 'position' (the position), 'scale' (the scale), and 'euler' (rotation specified as Euler angles in degrees).
-- Objects returned by createEntity() may be assigned a function to 'onUpdate' that takes the seconds elapsed since the last frame, 'deltaTime'. This function is executed each frame.
-- Objects returned by createEntity() must have their properties initialized after the object is created.
-- A function getPlanes() exists that returns an array of plane objects. The array may be empty.
-- Each plane object has two properties: 'center', the center position of the plane, and 'size', the size of the plane in each dimension. Each of these is an array of numbers of length 3.
-- A global variable 'cameraPosition' containing the camera position, which is the user position, as a 3-element float array.
-- The function getNearestPlane() returns the closest plane to the user or null if no planes exist.
-- The function getGroundPlane() returns the plane that corresponds to the floor or ground, or null if no planes exist.
-
-Write Javascript code for the user that:
-
-\(prompt)
-
-The code must obey the following constraints:
-- Is wrapped in an anonymous function that is then executed.
-- Does not define any new functions.
-- Defines all variables and constants used.
-- Does not call any functions besides those given above and those defined by the base language spec.
-"""
-    }
-
     public func runCode(code: String) {
         _jsContext.evaluateScript(code)
     }
