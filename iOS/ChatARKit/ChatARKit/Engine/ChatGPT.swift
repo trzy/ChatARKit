@@ -34,6 +34,8 @@ The code must not call any functions or use any data types besides those defined
 - The function getNearestPlane() takes no arguments and returns the closest plane to the user or null if no planes exist.
 - The function getGroundPlane() takes no arguments and returns the plane that corresponds to the floor or ground, or null if no planes exist.
 - Only planes returned by getPlanes() that are not the same as the plane returned by getGroundPlane() may be considered tables.
+- Make cubes have size [0.25,0.25,0.25].
+- When placing objects on planes, do not add any offset from the plane.
 """
             ]
         ]
