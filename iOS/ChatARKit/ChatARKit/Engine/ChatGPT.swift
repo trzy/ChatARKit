@@ -13,7 +13,7 @@ import UIKit
 public class ChatGPT {
     private var _task: URLSessionDataTask?
     private var _payload: [String: Any] = [
-        "model": "gpt-3.5-turbo",
+        "model": "gpt-3.5-turbo",   // if you have access to GPT-4, you can use it, too
         "messages": [
             [
                 "role": "system",
